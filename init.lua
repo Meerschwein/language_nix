@@ -32,7 +32,7 @@ syntax.add {
     { pattern = "%./[%w_%-/%.]+", type = "string" },
     { pattern = {"<", ">"},       type = "string" },
     -- every other symbol
-    { pattern = "[%a%-][%w%-]*", type = "symbol" },
+    { pattern = "[%a%-%_][%w%-%_]*", type = "symbol" },
     { pattern = ";%.,:",         type = "normal" },
     { pattern = "%.%.%.",        type = "normal" },
   },
