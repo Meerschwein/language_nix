@@ -26,8 +26,8 @@ syntax.add {
     { pattern = ">=",             type = "operator" },
     { pattern = "<=",             type = "operator" },
     -- paths
-    { pattern = "%./[%w_%-/%.]+", type = "string" },
-    { pattern = { "<", ">" },     type = "string" },
+    { pattern = "%.?%.?/[%w_%-/%.]+", type = "string" },
+    { pattern = { "<", ">" },         type = "string" },
     -- every other symbol
     { pattern = "[%a%-%_][%w%-%_]*", type = "symbol" },
     { pattern = ";%.,:",             type = "normal" },
