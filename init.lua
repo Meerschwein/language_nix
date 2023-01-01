@@ -82,9 +82,9 @@ merge_tables(default_patterns,
   { pattern = "!=",             type = "operator" },
   { pattern = ">=",             type = "operator" },
   { pattern = "<=",             type = "operator" },
-  -- paths
-  { pattern = "%.?%.?/[%w_%-/%.]+", type = "string" },
-  { pattern = { "<", ">" },         type = "string" },
+  -- paths (function because its not used otherwise)
+  { pattern = "%.?%.?/[%w_%-/%.]+", type = "function" },
+  { pattern = { "<", ">" },         type = "function" },
   -- every other symbol
   { pattern = "[%a%-%_][%w%-%_]*", type = "symbol" },
   { pattern = ";%.,:",             type = "normal" },
