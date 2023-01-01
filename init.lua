@@ -16,7 +16,7 @@ local function merge_tables(a, b)
   end
 end
 
-local normalSymbols = {
+local default_symbols = {
   ["import"]   = "keyword2",
   ["with"]     = "keyword2",
   ["builtins"] = "keyword2",
@@ -42,7 +42,7 @@ local stringInterpolation = {}
 merge_tables(stringInterpolation, {
   { pattern = {"%${", "}"}, type = "keyword2", syntax = {
     patterns = default_patterns,
-    symbols = normalSymbols,
+    symbols = default_symbols,
   }},
   { pattern = '[%S][%w]*', type = "string" },
 })
@@ -69,9 +69,8 @@ merge_tables(default_patterns,
   { pattern = "-?%.?%d+",         type = "number"  },
   -- interpolation
   { pattern = {"%${", "}"}, type = "keyword2", syntax = {
-    patterns = default_patterns
-    ,
-    symbols = normalSymbols,
+    patterns = default_patterns,
+    symbols = default_symbols,
   }},
   -- operators
   { pattern = "[%+%-%?!<>%*/]", type = "operator" },
@@ -98,5 +97,5 @@ syntax.add {
   comment = "#",
   block_comment = { "/*", "*/" },
   patterns = default_patterns,
-  symbols = normalSymbols,
+  symbols = default_symbols,
 }
