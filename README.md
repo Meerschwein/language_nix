@@ -9,4 +9,4 @@ git clone https://github.com/Meerschwein/language_nix ~/.config/lite-xl/plugins/
 
 ## Notes
 
-I was not able to get string interpolation properly working
+- paths and string interpolation don't always work
